@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1>Task</h1>
+    <ol>
+        <li>div-10-dynamically</li>
+        <li>id-10-different</li>
+        <li>class-10-different</li>
+        <li>according to id -content</li>
+        <li>according to classname-style</li>
+    </ol>
+    <ol type="A">
+        <li>textNode: "Hello World"</li>
+        <li>Create</li>
+        <li>add</li>
+    </ol>
+
+
+
+    <script>
+        let arr = ['a','b','c','d','e','f','g','h','i','j'];
+         for(let i=0; i<=9; i++){
+            const div = document.createElement('div');
+            document.body.append(div);
+            div.id = arr[i];
+            div.className = arr[i];
+            if(div.id =='a'){
+                div.textContent = "welcome 1";
+                div.style.background = "teal";
+                
+            }
+            else if(div.id == 'b'){
+                div.textContent = "welcome 2";
+                div.style.background = "gray";
+
+            }
+            else if(div.id == 'c'){
+                div.textContent = "welcome 3";
+                div.style.background = "coral";
+            }
+            else if ( div.id =='d'){
+                div.textContent = "welcome 4";
+                div.style.background = "pink";
+            }
+            else if (div.id =='e'){
+                div.textContent = "welcome 5";
+                div.style.background = "blue";
+
+            }
+            else if (div.id =='f'){
+                div.textContent = "welcome 6";
+                div.style.background ="orange";
+            }
+            else if (div.id =='g'){
+                div.textContent = "welcome 7";
+                div.style.background = "green";
+            }
+            else if (div.id =='h'){
+                div.textContent = "welcome 8";
+                div.style.background = "yellow";
+            }
+            else if (div.id =='i'){
+                div.textContent = "welcome 9"
+                div.style.background = "red";
+            }
+            else if (div.id == 'j'){
+                div.textContent = "welcome 10"
+                div.style.background = "khaki";
+            }
+            
+            
+         }
+
+    </script>
+    
+</body>
+</html>

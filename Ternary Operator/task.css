@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    transition: background-color 0.5s ease;
+  }
+  .day {
+    background-color: yellow;
+  }
+  .night {
+    background-color: navy;
+  }
+  .container {
+    background-color: var(--isDaytime, yellow);
+  }

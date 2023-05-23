@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake to camel</title>
+</head>
+<body>
+
+    <h1>Convert Snake case to Camel Case</h1>
+    <p id="result"></p>
+
+    <script>
+
+function snakeToCamel(str){
+    return str.replace(/[^a-zA-Z0-9]+(.)/g, (m,chr) => chr.toUpperCase());
+
+}
+
+let finalString = snakeToCamel('simple_snake_case_test');
+console.log(finalString);
+document.getElementById("result").innerHTML = finalString;
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last-digit</title>
+</head>
+<body>
+    <h1>Check the Last-Digit</h1>
+
+    <script>
+        const a = prompt("Enter a number");
+        const b = prompt("Enter a number");
+        const c = prompt("Enter a number");
+// find the result
+
+const result1 = a%10;
+const result2 = b%10;
+const result3 = c%10;
+// condition
+
+if(result1===result2 && result1===result3){
+    console.log(`${a},${b}and ${c} have the same last digit`);
+}
+else{
+    console.log(`${a},${b}and ${c} have not same last digit`);
+}
+
+    </script>
+    
+</body>
+</html>
