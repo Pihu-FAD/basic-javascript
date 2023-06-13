@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Date Interval Example</h1>
+        <form>
+          <div class="form-group">
+            <label for="start-date" class="lab">Start Date:</label>
+            <input type="date" class="form-control" id="start-date">
+          </div>
+          <div class="form-group">
+            <label for="end-date" class="lab">End Date:</label>
+            <input type="date" class="form-control" id="end-date">
+          </div>
+          <button type="button" class="btn btn-primary" id="calculate-btn" class="btn">Calculate Interval</button>
+          <div id="interval-result">
+            <div class="box">
+              <p>in years : <span id="years"></span></p>
+              <p>in months : <span id="months"></span></p>
+              <p>in weeks : <span id="weeks"></span></p>
+              <p>in days :<span id="days"></span></p>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+
+
+      <script>
+         $(function() {
+      $("#calculate-btn").click(function() {
+      let startDate = new Date($("#start-date").val());
+        let endDate = new Date($("#end-date").val());
+        let interval = endDate - startDate;
+
+        let days = Math.floor(interval / (24 * 60 * 60 * 1000));
+        let weeks = Math.floor(days / 7);
+        let months = Math.floor(days / 30);
+        let years = Math.floor(days / 365);
+
+
+        document.getElementById("years").innerHTML = years;
+        document.getElementById("months").innerHTML = months;
+        document.getElementById("weeks").innerHTML = weeks;
+        document.getElementById("days").innerHTML = days;
+
+        // let result = "Interval: " + days + " days, " + weeks + " weeks, " + months + " months, " + years + " years";
+        $("#interval-result").text(result);
+      });
+    });
+      </script>
+
+    
+</body>
+</html>
